@@ -1,0 +1,22 @@
+[package]
+name = "nekopoi"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kiizuha Kanazawa <kiizuha@gnuweeb.org>"]
+description = "A NekoPoi direct API, written in Rust, without scraping."
+readme = "README.md"
+keywords = ["nekopoi"]
+license = "MIT License"
+repository = "https://github.com/rushkii/nekopoi-rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+reqwest = { version = "0.11.18", features = ["json"] }
+serde = { version = "1.0.171", features = ["derive"] }
+serde_json = "1.0.102"
+slug = "0.1.4"
+tokio = { version = "1.29.1", features = ["rt-multi-thread", "macros"] }
